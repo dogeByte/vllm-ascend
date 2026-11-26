@@ -1,0 +1,481 @@
+{
+  "schema_version": 1,
+  "run_id": "260eaa7e5fb91b0b",
+  "image_digest": "sha256:7bff69f611867a77fb11da5e08f9debaa745ec0cf9615fa21456f467db71d6ba",
+  "source_commit": "39a2db66d00d141eccc1c3218b86206cfb720098",
+  "tilelang_commit": "9b5ac505c801ce038e31cc8ab6f1f83e14df1497",
+  "baseline": "native",
+  "candidate": "a5-style",
+  "environment": {
+    "device": "Ascend910_9362",
+    "python": "3.12.16",
+    "torch": "2.10.0+cpu",
+    "torch-npu": "2.10.0.post7",
+    "tilelang": "0.1.4",
+    "vllm-ascend": "0.19.1rc2.dev3322+g62fe4cde6"
+  },
+  "configuration": {
+    "heads": 64,
+    "hidden": 4096,
+    "core_count": 20,
+    "warmup": 5,
+    "repeat": 3,
+    "seed": 724311,
+    "head_dim": 128,
+    "npu_devices_used": 8,
+    "npu_devices_per_shape": 1,
+    "tokens": [
+      1,
+      16
+    ],
+    "batch": [
+      1,
+      80
+    ],
+    "timing_protocol": "graph",
+    "timing_method": "NPU stream-event time per full forward in a repeated NPU graph; ABBA/BAAB pairs",
+    "timing_unit": "microseconds",
+    "timing_accepted_tokens": 1,
+    "reset_timed": false,
+    "paired_samples_per_shape": 7,
+    "sample_order": "A is native, B is A5-style single-stream",
+    "accuracy_protocol": "both",
+    "accuracy_modes": [
+      "eager",
+      "graph"
+    ],
+    "accepted_prefix_cases": [
+      "one",
+      "two",
+      "full",
+      "mixed"
+    ]
+  },
+  "expected_shapes": 1280,
+  "validated_shapes": 1280,
+  "failed_shapes": 0,
+  "validated_pairs": 8960,
+  "raw_event_observations": 35840,
+  "accuracy": {
+    "native": {
+      "passed_shapes": 1280,
+      "checkpoint_unchanged_shapes": 1280,
+      "history_input_unchanged_shapes": 1280,
+      "output_checks": 51200,
+      "history_exact_checks": 10240,
+      "worst_by_output": {
+        "output": {
+          "max_abs": {
+            "value": 0.001953125,
+            "tokens": 2,
+            "batch": 24,
+            "prefix": "one",
+            "mode": "graph"
+          },
+          "relative_l2": {
+            "value": 0.0003994818025321687,
+            "tokens": 4,
+            "batch": 2,
+            "prefix": "full",
+            "mode": "graph"
+          }
+        },
+        "normalized": {
+          "max_abs": {
+            "value": 0.0078125,
+            "tokens": 6,
+            "batch": 53,
+            "prefix": "one",
+            "mode": "graph"
+          },
+          "relative_l2": {
+            "value": 0.00014456862998595227,
+            "tokens": 6,
+            "batch": 10,
+            "prefix": "one",
+            "mode": "eager"
+          }
+        },
+        "correction": {
+          "max_abs": {
+            "value": 1.1920928955078125e-07,
+            "tokens": 1,
+            "batch": 43,
+            "prefix": "one",
+            "mode": "graph"
+          },
+          "relative_l2": {
+            "value": 3.142226745361648e-08,
+            "tokens": 1,
+            "batch": 3,
+            "prefix": "one",
+            "mode": "eager"
+          }
+        },
+        "kg": {
+          "max_abs": {
+            "value": 0.0,
+            "tokens": 1,
+            "batch": 1,
+            "prefix": "one",
+            "mode": "eager"
+          },
+          "relative_l2": {
+            "value": 0.0,
+            "tokens": 1,
+            "batch": 1,
+            "prefix": "one",
+            "mode": "eager"
+          }
+        },
+        "history": {
+          "max_abs": {
+            "value": 0.0,
+            "tokens": 1,
+            "batch": 1,
+            "prefix": "one",
+            "mode": "eager"
+          },
+          "relative_l2": {
+            "value": 0.0,
+            "tokens": 1,
+            "batch": 1,
+            "prefix": "one",
+            "mode": "eager"
+          }
+        }
+      }
+    },
+    "single": {
+      "passed_shapes": 1280,
+      "checkpoint_unchanged_shapes": 1280,
+      "history_input_unchanged_shapes": 1280,
+      "output_checks": 51200,
+      "history_exact_checks": 10240,
+      "worst_by_output": {
+        "output": {
+          "max_abs": {
+            "value": 0.001953125,
+            "tokens": 1,
+            "batch": 64,
+            "prefix": "one",
+            "mode": "graph"
+          },
+          "relative_l2": {
+            "value": 0.0003590962158524871,
+            "tokens": 3,
+            "batch": 4,
+            "prefix": "two",
+            "mode": "graph"
+          }
+        },
+        "normalized": {
+          "max_abs": {
+            "value": 0.0078125,
+            "tokens": 3,
+            "batch": 66,
+            "prefix": "one",
+            "mode": "graph"
+          },
+          "relative_l2": {
+            "value": 0.00013907113550253126,
+            "tokens": 10,
+            "batch": 3,
+            "prefix": "full",
+            "mode": "eager"
+          }
+        },
+        "correction": {
+          "max_abs": {
+            "value": 1.7881393432617188e-07,
+            "tokens": 7,
+            "batch": 64,
+            "prefix": "full",
+            "mode": "eager"
+          },
+          "relative_l2": {
+            "value": 3.101489893256929e-08,
+            "tokens": 1,
+            "batch": 3,
+            "prefix": "one",
+            "mode": "eager"
+          }
+        },
+        "kg": {
+          "max_abs": {
+            "value": 0.0,
+            "tokens": 1,
+            "batch": 1,
+            "prefix": "one",
+            "mode": "eager"
+          },
+          "relative_l2": {
+            "value": 0.0,
+            "tokens": 1,
+            "batch": 1,
+            "prefix": "one",
+            "mode": "eager"
+          }
+        },
+        "history": {
+          "max_abs": {
+            "value": 0.0,
+            "tokens": 1,
+            "batch": 1,
+            "prefix": "one",
+            "mode": "eager"
+          },
+          "relative_l2": {
+            "value": 0.0,
+            "tokens": 1,
+            "batch": 1,
+            "prefix": "one",
+            "mode": "eager"
+          }
+        }
+      }
+    }
+  },
+  "latency": {
+    "graph": {
+      "median_wins": {
+        "native": 3,
+        "single": 1277,
+        "tied": 0
+      },
+      "paired_sample_wins": {
+        "native": 17,
+        "single": 8943,
+        "tied": 0
+      },
+      "median_single_latency_reduction_pct": 23.287487857930827,
+      "geomean_native_over_single": 1.2736032224156182
+    },
+    "graph_by_tokens": {
+      "1": {
+        "median_wins": {
+          "native": 3,
+          "single": 77,
+          "tied": 0
+        },
+        "paired_sample_wins": {
+          "native": 17,
+          "single": 543,
+          "tied": 0
+        },
+        "median_single_latency_reduction_pct": 6.954718897311791,
+        "geomean_native_over_single": 1.060946699030967
+      },
+      "2": {
+        "median_wins": {
+          "native": 0,
+          "single": 80,
+          "tied": 0
+        },
+        "paired_sample_wins": {
+          "native": 0,
+          "single": 560,
+          "tied": 0
+        },
+        "median_single_latency_reduction_pct": 19.66319726849491,
+        "geomean_native_over_single": 1.2150113601180472
+      },
+      "3": {
+        "median_wins": {
+          "native": 0,
+          "single": 80,
+          "tied": 0
+        },
+        "paired_sample_wins": {
+          "native": 0,
+          "single": 560,
+          "tied": 0
+        },
+        "median_single_latency_reduction_pct": 20.749491837043962,
+        "geomean_native_over_single": 1.2379780442352393
+      },
+      "4": {
+        "median_wins": {
+          "native": 0,
+          "single": 80,
+          "tied": 0
+        },
+        "paired_sample_wins": {
+          "native": 0,
+          "single": 560,
+          "tied": 0
+        },
+        "median_single_latency_reduction_pct": 21.192047365097636,
+        "geomean_native_over_single": 1.2514411694916123
+      },
+      "5": {
+        "median_wins": {
+          "native": 0,
+          "single": 80,
+          "tied": 0
+        },
+        "paired_sample_wins": {
+          "native": 0,
+          "single": 560,
+          "tied": 0
+        },
+        "median_single_latency_reduction_pct": 21.715214551842305,
+        "geomean_native_over_single": 1.2595420534081176
+      },
+      "6": {
+        "median_wins": {
+          "native": 0,
+          "single": 80,
+          "tied": 0
+        },
+        "paired_sample_wins": {
+          "native": 0,
+          "single": 560,
+          "tied": 0
+        },
+        "median_single_latency_reduction_pct": 24.956891416007426,
+        "geomean_native_over_single": 1.3064182400383437
+      },
+      "7": {
+        "median_wins": {
+          "native": 0,
+          "single": 80,
+          "tied": 0
+        },
+        "paired_sample_wins": {
+          "native": 0,
+          "single": 560,
+          "tied": 0
+        },
+        "median_single_latency_reduction_pct": 23.688826241069755,
+        "geomean_native_over_single": 1.287955131168377
+      },
+      "8": {
+        "median_wins": {
+          "native": 0,
+          "single": 80,
+          "tied": 0
+        },
+        "paired_sample_wins": {
+          "native": 0,
+          "single": 560,
+          "tied": 0
+        },
+        "median_single_latency_reduction_pct": 23.585561069053064,
+        "geomean_native_over_single": 1.2876435561566837
+      },
+      "9": {
+        "median_wins": {
+          "native": 0,
+          "single": 80,
+          "tied": 0
+        },
+        "paired_sample_wins": {
+          "native": 0,
+          "single": 560,
+          "tied": 0
+        },
+        "median_single_latency_reduction_pct": 23.59009546414992,
+        "geomean_native_over_single": 1.290121732269695
+      },
+      "10": {
+        "median_wins": {
+          "native": 0,
+          "single": 80,
+          "tied": 0
+        },
+        "paired_sample_wins": {
+          "native": 0,
+          "single": 560,
+          "tied": 0
+        },
+        "median_single_latency_reduction_pct": 26.912808012139738,
+        "geomean_native_over_single": 1.3433921362592194
+      },
+      "11": {
+        "median_wins": {
+          "native": 0,
+          "single": 80,
+          "tied": 0
+        },
+        "paired_sample_wins": {
+          "native": 0,
+          "single": 560,
+          "tied": 0
+        },
+        "median_single_latency_reduction_pct": 24.43864852606551,
+        "geomean_native_over_single": 1.303036956418084
+      },
+      "12": {
+        "median_wins": {
+          "native": 0,
+          "single": 80,
+          "tied": 0
+        },
+        "paired_sample_wins": {
+          "native": 0,
+          "single": 560,
+          "tied": 0
+        },
+        "median_single_latency_reduction_pct": 24.030199218269438,
+        "geomean_native_over_single": 1.2993561150638464
+      },
+      "13": {
+        "median_wins": {
+          "native": 0,
+          "single": 80,
+          "tied": 0
+        },
+        "paired_sample_wins": {
+          "native": 0,
+          "single": 560,
+          "tied": 0
+        },
+        "median_single_latency_reduction_pct": 23.94230150635091,
+        "geomean_native_over_single": 1.2960655825027865
+      },
+      "14": {
+        "median_wins": {
+          "native": 0,
+          "single": 80,
+          "tied": 0
+        },
+        "paired_sample_wins": {
+          "native": 0,
+          "single": 560,
+          "tied": 0
+        },
+        "median_single_latency_reduction_pct": 27.73758244388037,
+        "geomean_native_over_single": 1.3626222139221154
+      },
+      "15": {
+        "median_wins": {
+          "native": 0,
+          "single": 80,
+          "tied": 0
+        },
+        "paired_sample_wins": {
+          "native": 0,
+          "single": 560,
+          "tied": 0
+        },
+        "median_single_latency_reduction_pct": 24.330542817841668,
+        "geomean_native_over_single": 1.3061320843594972
+      },
+      "16": {
+        "median_wins": {
+          "native": 0,
+          "single": 80,
+          "tied": 0
+        },
+        "paired_sample_wins": {
+          "native": 0,
+          "single": 560,
+          "tied": 0
+        },
+        "median_single_latency_reduction_pct": 23.821757389762066,
+        "geomean_native_over_single": 1.2991217131261699
+      }
+    }
+  }
+}
