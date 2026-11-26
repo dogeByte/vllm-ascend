@@ -1,0 +1,11 @@
+batch,tokens,backend,sample,device_task_span_us,recurrent_verification_us,gated_rmsnorm_us,fused_recurrent_verification_and_gated_rmsnorm_us,verification_and_norm_total_us
+16,6,Native,1,1139.14,726.54,15.06,,741.60
+16,6,Native,2,1135.26,726.10,14.98,,741.08
+16,6,Native,3,1138.18,726.48,14.94,,741.42
+16,6,Native,4,1135.78,726.18,15.26,,741.44
+16,6,Native,5,1132.38,727.96,14.80,,742.76
+16,6,TileLang,1,897.92,,,493.58,493.58
+16,6,TileLang,2,895.42,,,491.96,491.96
+16,6,TileLang,3,903.82,,,491.96,491.96
+16,6,TileLang,4,895.74,,,492.04,492.04
+16,6,TileLang,5,904.50,,,492.68,492.68

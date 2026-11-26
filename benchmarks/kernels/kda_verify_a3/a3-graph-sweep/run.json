@@ -4,8 +4,8 @@
   "image_digest": "sha256:7bff69f611867a77fb11da5e08f9debaa745ec0cf9615fa21456f467db71d6ba",
   "source_commit": "39a2db66d00d141eccc1c3218b86206cfb720098",
   "tilelang_commit": "9b5ac505c801ce038e31cc8ab6f1f83e14df1497",
-  "baseline": "native",
-  "candidate": "a5-style",
+  "baseline": "unfused_native",
+  "candidate": "tilelang",
   "environment": {
     "device": "Ascend910_9362",
     "python": "3.12.16",
@@ -33,12 +33,12 @@
       80
     ],
     "timing_protocol": "graph",
-    "timing_method": "NPU stream-event time per full forward in a repeated NPU graph; ABBA/BAAB pairs",
+    "timing_method": "NPU event time per full forward in a repeated NPU graph; ABBA/BAAB pairs",
     "timing_unit": "microseconds",
     "timing_accepted_tokens": 1,
     "reset_timed": false,
     "paired_samples_per_shape": 7,
-    "sample_order": "A is native, B is A5-style single-stream",
+    "sample_order": "A is unfused native, B is TileLang",
     "accuracy_protocol": "both",
     "accuracy_modes": [
       "eager",
@@ -146,7 +146,7 @@
         }
       }
     },
-    "single": {
+    "tilelang": {
       "passed_shapes": 1280,
       "checkpoint_unchanged_shapes": 1280,
       "history_input_unchanged_shapes": 1280,
@@ -240,241 +240,241 @@
     "graph": {
       "median_wins": {
         "native": 3,
-        "single": 1277,
+        "tilelang": 1277,
         "tied": 0
       },
       "paired_sample_wins": {
         "native": 17,
-        "single": 8943,
+        "tilelang": 8943,
         "tied": 0
       },
-      "median_single_latency_reduction_pct": 23.287487857930827,
-      "geomean_native_over_single": 1.2736032224156182
+      "median_tilelang_latency_reduction_pct": 23.287487857930827,
+      "geomean_native_over_tilelang": 1.2736032224156182
     },
     "graph_by_tokens": {
       "1": {
         "median_wins": {
           "native": 3,
-          "single": 77,
+          "tilelang": 77,
           "tied": 0
         },
         "paired_sample_wins": {
           "native": 17,
-          "single": 543,
+          "tilelang": 543,
           "tied": 0
         },
-        "median_single_latency_reduction_pct": 6.954718897311791,
-        "geomean_native_over_single": 1.060946699030967
+        "median_tilelang_latency_reduction_pct": 6.954718897311791,
+        "geomean_native_over_tilelang": 1.060946699030967
       },
       "2": {
         "median_wins": {
           "native": 0,
-          "single": 80,
+          "tilelang": 80,
           "tied": 0
         },
         "paired_sample_wins": {
           "native": 0,
-          "single": 560,
+          "tilelang": 560,
           "tied": 0
         },
-        "median_single_latency_reduction_pct": 19.66319726849491,
-        "geomean_native_over_single": 1.2150113601180472
+        "median_tilelang_latency_reduction_pct": 19.66319726849491,
+        "geomean_native_over_tilelang": 1.2150113601180472
       },
       "3": {
         "median_wins": {
           "native": 0,
-          "single": 80,
+          "tilelang": 80,
           "tied": 0
         },
         "paired_sample_wins": {
           "native": 0,
-          "single": 560,
+          "tilelang": 560,
           "tied": 0
         },
-        "median_single_latency_reduction_pct": 20.749491837043962,
-        "geomean_native_over_single": 1.2379780442352393
+        "median_tilelang_latency_reduction_pct": 20.749491837043962,
+        "geomean_native_over_tilelang": 1.2379780442352393
       },
       "4": {
         "median_wins": {
           "native": 0,
-          "single": 80,
+          "tilelang": 80,
           "tied": 0
         },
         "paired_sample_wins": {
           "native": 0,
-          "single": 560,
+          "tilelang": 560,
           "tied": 0
         },
-        "median_single_latency_reduction_pct": 21.192047365097636,
-        "geomean_native_over_single": 1.2514411694916123
+        "median_tilelang_latency_reduction_pct": 21.192047365097636,
+        "geomean_native_over_tilelang": 1.2514411694916123
       },
       "5": {
         "median_wins": {
           "native": 0,
-          "single": 80,
+          "tilelang": 80,
           "tied": 0
         },
         "paired_sample_wins": {
           "native": 0,
-          "single": 560,
+          "tilelang": 560,
           "tied": 0
         },
-        "median_single_latency_reduction_pct": 21.715214551842305,
-        "geomean_native_over_single": 1.2595420534081176
+        "median_tilelang_latency_reduction_pct": 21.715214551842305,
+        "geomean_native_over_tilelang": 1.2595420534081176
       },
       "6": {
         "median_wins": {
           "native": 0,
-          "single": 80,
+          "tilelang": 80,
           "tied": 0
         },
         "paired_sample_wins": {
           "native": 0,
-          "single": 560,
+          "tilelang": 560,
           "tied": 0
         },
-        "median_single_latency_reduction_pct": 24.956891416007426,
-        "geomean_native_over_single": 1.3064182400383437
+        "median_tilelang_latency_reduction_pct": 24.956891416007426,
+        "geomean_native_over_tilelang": 1.3064182400383437
       },
       "7": {
         "median_wins": {
           "native": 0,
-          "single": 80,
+          "tilelang": 80,
           "tied": 0
         },
         "paired_sample_wins": {
           "native": 0,
-          "single": 560,
+          "tilelang": 560,
           "tied": 0
         },
-        "median_single_latency_reduction_pct": 23.688826241069755,
-        "geomean_native_over_single": 1.287955131168377
+        "median_tilelang_latency_reduction_pct": 23.688826241069755,
+        "geomean_native_over_tilelang": 1.287955131168377
       },
       "8": {
         "median_wins": {
           "native": 0,
-          "single": 80,
+          "tilelang": 80,
           "tied": 0
         },
         "paired_sample_wins": {
           "native": 0,
-          "single": 560,
+          "tilelang": 560,
           "tied": 0
         },
-        "median_single_latency_reduction_pct": 23.585561069053064,
-        "geomean_native_over_single": 1.2876435561566837
+        "median_tilelang_latency_reduction_pct": 23.585561069053064,
+        "geomean_native_over_tilelang": 1.2876435561566837
       },
       "9": {
         "median_wins": {
           "native": 0,
-          "single": 80,
+          "tilelang": 80,
           "tied": 0
         },
         "paired_sample_wins": {
           "native": 0,
-          "single": 560,
+          "tilelang": 560,
           "tied": 0
         },
-        "median_single_latency_reduction_pct": 23.59009546414992,
-        "geomean_native_over_single": 1.290121732269695
+        "median_tilelang_latency_reduction_pct": 23.59009546414992,
+        "geomean_native_over_tilelang": 1.290121732269695
       },
       "10": {
         "median_wins": {
           "native": 0,
-          "single": 80,
+          "tilelang": 80,
           "tied": 0
         },
         "paired_sample_wins": {
           "native": 0,
-          "single": 560,
+          "tilelang": 560,
           "tied": 0
         },
-        "median_single_latency_reduction_pct": 26.912808012139738,
-        "geomean_native_over_single": 1.3433921362592194
+        "median_tilelang_latency_reduction_pct": 26.912808012139738,
+        "geomean_native_over_tilelang": 1.3433921362592194
       },
       "11": {
         "median_wins": {
           "native": 0,
-          "single": 80,
+          "tilelang": 80,
           "tied": 0
         },
         "paired_sample_wins": {
           "native": 0,
-          "single": 560,
+          "tilelang": 560,
           "tied": 0
         },
-        "median_single_latency_reduction_pct": 24.43864852606551,
-        "geomean_native_over_single": 1.303036956418084
+        "median_tilelang_latency_reduction_pct": 24.43864852606551,
+        "geomean_native_over_tilelang": 1.303036956418084
       },
       "12": {
         "median_wins": {
           "native": 0,
-          "single": 80,
+          "tilelang": 80,
           "tied": 0
         },
         "paired_sample_wins": {
           "native": 0,
-          "single": 560,
+          "tilelang": 560,
           "tied": 0
         },
-        "median_single_latency_reduction_pct": 24.030199218269438,
-        "geomean_native_over_single": 1.2993561150638464
+        "median_tilelang_latency_reduction_pct": 24.030199218269438,
+        "geomean_native_over_tilelang": 1.2993561150638464
       },
       "13": {
         "median_wins": {
           "native": 0,
-          "single": 80,
+          "tilelang": 80,
           "tied": 0
         },
         "paired_sample_wins": {
           "native": 0,
-          "single": 560,
+          "tilelang": 560,
           "tied": 0
         },
-        "median_single_latency_reduction_pct": 23.94230150635091,
-        "geomean_native_over_single": 1.2960655825027865
+        "median_tilelang_latency_reduction_pct": 23.94230150635091,
+        "geomean_native_over_tilelang": 1.2960655825027865
       },
       "14": {
         "median_wins": {
           "native": 0,
-          "single": 80,
+          "tilelang": 80,
           "tied": 0
         },
         "paired_sample_wins": {
           "native": 0,
-          "single": 560,
+          "tilelang": 560,
           "tied": 0
         },
-        "median_single_latency_reduction_pct": 27.73758244388037,
-        "geomean_native_over_single": 1.3626222139221154
+        "median_tilelang_latency_reduction_pct": 27.73758244388037,
+        "geomean_native_over_tilelang": 1.3626222139221154
       },
       "15": {
         "median_wins": {
           "native": 0,
-          "single": 80,
+          "tilelang": 80,
           "tied": 0
         },
         "paired_sample_wins": {
           "native": 0,
-          "single": 560,
+          "tilelang": 560,
           "tied": 0
         },
-        "median_single_latency_reduction_pct": 24.330542817841668,
-        "geomean_native_over_single": 1.3061320843594972
+        "median_tilelang_latency_reduction_pct": 24.330542817841668,
+        "geomean_native_over_tilelang": 1.3061320843594972
       },
       "16": {
         "median_wins": {
           "native": 0,
-          "single": 80,
+          "tilelang": 80,
           "tied": 0
         },
         "paired_sample_wins": {
           "native": 0,
-          "single": 560,
+          "tilelang": 560,
           "tied": 0
         },
-        "median_single_latency_reduction_pct": 23.821757389762066,
-        "geomean_native_over_single": 1.2991217131261699
+        "median_tilelang_latency_reduction_pct": 23.821757389762066,
+        "geomean_native_over_tilelang": 1.2991217131261699
       }
     }
   }
