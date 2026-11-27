@@ -1,0 +1,480 @@
+{
+  "peak_hbm_gb_s": 1600,
+  "peak_projection_tflops": 280,
+  "ideal_time_basis": "TileLang logical bytes and useful projection FLOPs",
+  "across_shapes": {
+    "transfer_bound": {
+      "shapes": 95,
+      "unfused_native": {
+        "physical_mbu_pct": 21.983681180159085,
+        "projection_mfu_pct": 8.614287901755588
+      },
+      "tilelang": {
+        "physical_mbu_pct": 28.5793943901212,
+        "projection_mfu_pct": 11.493212349697634
+      }
+    },
+    "projection_bound": {
+      "shapes": 49,
+      "unfused_native": {
+        "physical_mbu_pct": 11.399663861468316,
+        "projection_mfu_pct": 10.734874564613337
+      },
+      "tilelang": {
+        "physical_mbu_pct": 15.57463723451595,
+        "projection_mfu_pct": 15.524152714626927
+      }
+    },
+    "tied": {
+      "shapes": 0
+    }
+  },
+  "by_tokens": {
+    "1": {
+      "transfer_bound": {
+        "shapes": 9,
+        "unfused_native": {
+          "physical_mbu_pct": 47.28720089863396,
+          "projection_mfu_pct": 6.078216025138137
+        },
+        "tilelang": {
+          "physical_mbu_pct": 50.08288671242667,
+          "projection_mfu_pct": 6.491640760174214
+        }
+      },
+      "projection_bound": {
+        "shapes": 0
+      },
+      "tied": {
+        "shapes": 0
+      }
+    },
+    "2": {
+      "transfer_bound": {
+        "shapes": 9,
+        "unfused_native": {
+          "physical_mbu_pct": 32.230458805199376,
+          "projection_mfu_pct": 7.679200122226462
+        },
+        "tilelang": {
+          "physical_mbu_pct": 40.16018572654252,
+          "projection_mfu_pct": 9.732386685830608
+        }
+      },
+      "projection_bound": {
+        "shapes": 0
+      },
+      "tied": {
+        "shapes": 0
+      }
+    },
+    "3": {
+      "transfer_bound": {
+        "shapes": 9,
+        "unfused_native": {
+          "physical_mbu_pct": 26.017416179277795,
+          "projection_mfu_pct": 8.424548994475945
+        },
+        "tilelang": {
+          "physical_mbu_pct": 33.291670704775484,
+          "projection_mfu_pct": 11.05969770306145
+        }
+      },
+      "projection_bound": {
+        "shapes": 0
+      },
+      "tied": {
+        "shapes": 0
+      }
+    },
+    "4": {
+      "transfer_bound": {
+        "shapes": 9,
+        "unfused_native": {
+          "physical_mbu_pct": 21.062735431426837,
+          "projection_mfu_pct": 8.872519326348396
+        },
+        "tilelang": {
+          "physical_mbu_pct": 26.945642567649326,
+          "projection_mfu_pct": 11.822874472322512
+        }
+      },
+      "projection_bound": {
+        "shapes": 0
+      },
+      "tied": {
+        "shapes": 0
+      }
+    },
+    "5": {
+      "transfer_bound": {
+        "shapes": 9,
+        "unfused_native": {
+          "physical_mbu_pct": 18.64207841709252,
+          "projection_mfu_pct": 9.315309669779412
+        },
+        "tilelang": {
+          "physical_mbu_pct": 24.244566316804907,
+          "projection_mfu_pct": 12.69642804261346
+        }
+      },
+      "projection_bound": {
+        "shapes": 0
+      },
+      "tied": {
+        "shapes": 0
+      }
+    },
+    "6": {
+      "transfer_bound": {
+        "shapes": 9,
+        "unfused_native": {
+          "physical_mbu_pct": 17.395436445168556,
+          "projection_mfu_pct": 9.870719250657192
+        },
+        "tilelang": {
+          "physical_mbu_pct": 22.8809306780401,
+          "projection_mfu_pct": 13.673538030656424
+        }
+      },
+      "projection_bound": {
+        "shapes": 0
+      },
+      "tied": {
+        "shapes": 0
+      }
+    },
+    "7": {
+      "transfer_bound": {
+        "shapes": 8,
+        "unfused_native": {
+          "physical_mbu_pct": 16.400862783696294,
+          "projection_mfu_pct": 9.75147091213124
+        },
+        "tilelang": {
+          "physical_mbu_pct": 21.495746904106824,
+          "projection_mfu_pct": 13.565371757638768
+        }
+      },
+      "projection_bound": {
+        "shapes": 1,
+        "unfused_native": {
+          "physical_mbu_pct": 13.648879144919958,
+          "projection_mfu_pct": 10.590637636514098
+        },
+        "tilelang": {
+          "physical_mbu_pct": 18.76329942194753,
+          "projection_mfu_pct": 15.188088492850445
+        }
+      },
+      "tied": {
+        "shapes": 0
+      }
+    },
+    "8": {
+      "transfer_bound": {
+        "shapes": 6,
+        "unfused_native": {
+          "physical_mbu_pct": 16.854677855916364,
+          "projection_mfu_pct": 9.431930400584708
+        },
+        "tilelang": {
+          "physical_mbu_pct": 21.983524924655363,
+          "projection_mfu_pct": 12.900394563484005
+        }
+      },
+      "projection_bound": {
+        "shapes": 3,
+        "unfused_native": {
+          "physical_mbu_pct": 13.147435633617143,
+          "projection_mfu_pct": 10.648668933133136
+        },
+        "tilelang": {
+          "physical_mbu_pct": 18.05394186694833,
+          "projection_mfu_pct": 15.293241619304132
+        }
+      },
+      "tied": {
+        "shapes": 0
+      }
+    },
+    "9": {
+      "transfer_bound": {
+        "shapes": 5,
+        "unfused_native": {
+          "physical_mbu_pct": 16.83785070193486,
+          "projection_mfu_pct": 9.171718039620803
+        },
+        "tilelang": {
+          "physical_mbu_pct": 21.5307271765612,
+          "projection_mfu_pct": 12.474980385530733
+        }
+      },
+      "projection_bound": {
+        "shapes": 4,
+        "unfused_native": {
+          "physical_mbu_pct": 12.59249632014562,
+          "projection_mfu_pct": 10.682565194841075
+        },
+        "tilelang": {
+          "physical_mbu_pct": 17.319940994274077,
+          "projection_mfu_pct": 15.419789200111378
+        }
+      },
+      "tied": {
+        "shapes": 0
+      }
+    },
+    "10": {
+      "transfer_bound": {
+        "shapes": 4,
+        "unfused_native": {
+          "physical_mbu_pct": 18.778408694495997,
+          "projection_mfu_pct": 9.002498116096067
+        },
+        "tilelang": {
+          "physical_mbu_pct": 24.349685736500724,
+          "projection_mfu_pct": 12.260588899964091
+        }
+      },
+      "projection_bound": {
+        "shapes": 5,
+        "unfused_native": {
+          "physical_mbu_pct": 12.24041198525374,
+          "projection_mfu_pct": 10.6526996866586
+        },
+        "tilelang": {
+          "physical_mbu_pct": 16.867305366612143,
+          "projection_mfu_pct": 15.35176406198339
+        }
+      },
+      "tied": {
+        "shapes": 0
+      }
+    },
+    "11": {
+      "transfer_bound": {
+        "shapes": 4,
+        "unfused_native": {
+          "physical_mbu_pct": 17.900645418969717,
+          "projection_mfu_pct": 9.157912807552382
+        },
+        "tilelang": {
+          "physical_mbu_pct": 23.43509922733363,
+          "projection_mfu_pct": 12.556731035768921
+        }
+      },
+      "projection_bound": {
+        "shapes": 5,
+        "unfused_native": {
+          "physical_mbu_pct": 11.518692988929896,
+          "projection_mfu_pct": 10.677410049587161
+        },
+        "tilelang": {
+          "physical_mbu_pct": 15.875696866276785,
+          "projection_mfu_pct": 15.486265507962484
+        }
+      },
+      "tied": {
+        "shapes": 0
+      }
+    },
+    "12": {
+      "transfer_bound": {
+        "shapes": 3,
+        "unfused_native": {
+          "physical_mbu_pct": 19.533327166484458,
+          "projection_mfu_pct": 8.892891687109282
+        },
+        "tilelang": {
+          "physical_mbu_pct": 25.382100447384726,
+          "projection_mfu_pct": 12.13829456606112
+        }
+      },
+      "projection_bound": {
+        "shapes": 6,
+        "unfused_native": {
+          "physical_mbu_pct": 11.407897090601269,
+          "projection_mfu_pct": 10.790044202916107
+        },
+        "tilelang": {
+          "physical_mbu_pct": 15.677060802177893,
+          "projection_mfu_pct": 15.592083666971114
+        }
+      },
+      "tied": {
+        "shapes": 0
+      }
+    },
+    "13": {
+      "transfer_bound": {
+        "shapes": 3,
+        "unfused_native": {
+          "physical_mbu_pct": 17.712904415797006,
+          "projection_mfu_pct": 8.459131653789749
+        },
+        "tilelang": {
+          "physical_mbu_pct": 22.29679167625353,
+          "projection_mfu_pct": 11.246673409548364
+        }
+      },
+      "projection_bound": {
+        "shapes": 6,
+        "unfused_native": {
+          "physical_mbu_pct": 10.68213494643771,
+          "projection_mfu_pct": 10.648459543115681
+        },
+        "tilelang": {
+          "physical_mbu_pct": 14.86990165495449,
+          "projection_mfu_pct": 15.371374063019228
+        }
+      },
+      "tied": {
+        "shapes": 0
+      }
+    },
+    "14": {
+      "transfer_bound": {
+        "shapes": 3,
+        "unfused_native": {
+          "physical_mbu_pct": 16.987488955259007,
+          "projection_mfu_pct": 8.573877709414734
+        },
+        "tilelang": {
+          "physical_mbu_pct": 21.69175544870179,
+          "projection_mfu_pct": 11.507830686235145
+        }
+      },
+      "projection_bound": {
+        "shapes": 6,
+        "unfused_native": {
+          "physical_mbu_pct": 10.672532051144728,
+          "projection_mfu_pct": 10.7491100268176
+        },
+        "tilelang": {
+          "physical_mbu_pct": 14.807979366035203,
+          "projection_mfu_pct": 15.622333605599227
+        }
+      },
+      "tied": {
+        "shapes": 0
+      }
+    },
+    "15": {
+      "transfer_bound": {
+        "shapes": 3,
+        "unfused_native": {
+          "physical_mbu_pct": 16.482311153223073,
+          "projection_mfu_pct": 8.734906541814262
+        },
+        "tilelang": {
+          "physical_mbu_pct": 21.098625456379104,
+          "projection_mfu_pct": 11.851439113917671
+        }
+      },
+      "projection_bound": {
+        "shapes": 6,
+        "unfused_native": {
+          "physical_mbu_pct": 10.49271175695749,
+          "projection_mfu_pct": 10.901059638042042
+        },
+        "tilelang": {
+          "physical_mbu_pct": 14.55397935181415,
+          "projection_mfu_pct": 15.878649917692574
+        }
+      },
+      "tied": {
+        "shapes": 0
+      }
+    },
+    "16": {
+      "transfer_bound": {
+        "shapes": 2,
+        "unfused_native": {
+          "physical_mbu_pct": 28.049651090103954,
+          "projection_mfu_pct": 6.194927224692458
+        },
+        "tilelang": {
+          "physical_mbu_pct": 33.105372726786314,
+          "projection_mfu_pct": 8.088432438030276
+        }
+      },
+      "projection_bound": {
+        "shapes": 7,
+        "unfused_native": {
+          "physical_mbu_pct": 10.151624428706675,
+          "projection_mfu_pct": 10.978633689048175
+        },
+        "tilelang": {
+          "physical_mbu_pct": 14.209075867326932,
+          "projection_mfu_pct": 16.025757300296974
+        }
+      },
+      "tied": {
+        "shapes": 0
+      }
+    }
+  },
+  "representative_shapes": [
+    {
+      "batch": 1,
+      "tokens": 6,
+      "limiting_ideal_time": "transfer_bound",
+      "tilelang_ideal_transfer_us": 176.55296,
+      "ideal_projection_us": 5.89824,
+      "unfused_native": {
+        "physical_mbu_pct": 52.8310551126074,
+        "projection_mfu_pct": 1.7563172204324744
+      },
+      "tilelang": {
+        "physical_mbu_pct": 56.17495370957002,
+        "projection_mfu_pct": 1.8989011544627643
+      }
+    },
+    {
+      "batch": 40,
+      "tokens": 6,
+      "limiting_ideal_time": "transfer_bound",
+      "tilelang_ideal_transfer_us": 347.26688,
+      "ideal_projection_us": 235.9296,
+      "unfused_native": {
+        "physical_mbu_pct": 17.395436445168556,
+        "projection_mfu_pct": 9.870719250657192
+      },
+      "tilelang": {
+        "physical_mbu_pct": 22.8809306780401,
+        "projection_mfu_pct": 13.673538030656424
+      }
+    },
+    {
+      "batch": 80,
+      "tokens": 6,
+      "limiting_ideal_time": "transfer_bound",
+      "tilelang_ideal_transfer_us": 522.35808,
+      "ideal_projection_us": 471.8592,
+      "unfused_native": {
+        "physical_mbu_pct": 14.927535884283692,
+        "projection_mfu_pct": 10.538358452314489
+      },
+      "tilelang": {
+        "physical_mbu_pct": 20.47830957866571,
+        "projection_mfu_pct": 15.036349654657148
+      }
+    },
+    {
+      "batch": 80,
+      "tokens": 16,
+      "limiting_ideal_time": "projection_bound",
+      "tilelang_ideal_transfer_us": 735.99008,
+      "ideal_projection_us": 1258.2912,
+      "unfused_native": {
+        "physical_mbu_pct": 9.604082742738925,
+        "projection_mfu_pct": 11.096215126692082
+      },
+      "tilelang": {
+        "physical_mbu_pct": 13.400580342530924,
+        "projection_mfu_pct": 16.29975660981496
+      }
+    }
+  ]
+}

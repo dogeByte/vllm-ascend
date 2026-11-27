@@ -1,0 +1,92 @@
+{
+  "variant": "combined",
+  "tokens": 6,
+  "samples_per_backend": 11,
+  "accepted_tokens": 1,
+  "modules": {
+    "A": {
+      "batches": 50,
+      "selected_batches": [
+        {
+          "module": "A",
+          "batch": 1,
+          "tokens": 6,
+          "native_compute_busy_us": 340.367,
+          "tilelang_compute_busy_us": 313.667,
+          "compute_busy_speedup": 1.0851221199552392,
+          "native_device_span_us": 340.627,
+          "tilelang_device_span_us": 313.887,
+          "device_span_speedup": 1.0851898931781183
+        },
+        {
+          "module": "A",
+          "batch": 10,
+          "tokens": 6,
+          "native_compute_busy_us": 818.977,
+          "tilelang_compute_busy_us": 651.293,
+          "compute_busy_speedup": 1.2574632308346627,
+          "native_device_span_us": 819.217,
+          "tilelang_device_span_us": 651.593,
+          "device_span_speedup": 1.2572526101416068
+        },
+        {
+          "module": "A",
+          "batch": 50,
+          "tokens": 6,
+          "native_compute_busy_us": 2922.398,
+          "tilelang_compute_busy_us": 2090.942,
+          "compute_busy_speedup": 1.3976466109533408,
+          "native_device_span_us": 2922.598,
+          "tilelang_device_span_us": 2091.162,
+          "device_span_speedup": 1.3975952126138482
+        }
+      ],
+      "compute_busy_geomean_speedup": 1.3141302975358926,
+      "compute_busy_tilelang_wins": 50,
+      "device_span_geomean_speedup": 1.314099139789035,
+      "device_span_tilelang_wins": 50
+    },
+    "B": {
+      "batches": 50,
+      "selected_batches": [
+        {
+          "module": "B",
+          "batch": 1,
+          "tokens": 6,
+          "native_compute_busy_us": 337.607,
+          "tilelang_compute_busy_us": 307.566,
+          "compute_busy_speedup": 1.0976733449080849,
+          "native_device_span_us": 337.887,
+          "tilelang_device_span_us": 307.786,
+          "device_span_speedup": 1.0977984703657737
+        },
+        {
+          "module": "B",
+          "batch": 10,
+          "tokens": 6,
+          "native_compute_busy_us": 817.736,
+          "tilelang_compute_busy_us": 649.513,
+          "compute_busy_speedup": 1.2589986651537382,
+          "native_device_span_us": 818.016,
+          "tilelang_device_span_us": 649.713,
+          "device_span_speedup": 1.2590420693444644
+        },
+        {
+          "module": "B",
+          "batch": 50,
+          "tokens": 6,
+          "native_compute_busy_us": 2925.599,
+          "tilelang_compute_busy_us": 2089.802,
+          "compute_busy_speedup": 1.399940759938023,
+          "native_device_span_us": 2925.879,
+          "tilelang_device_span_us": 2090.042,
+          "device_span_speedup": 1.3999139730206378
+        }
+      ],
+      "compute_busy_geomean_speedup": 1.3168651898753279,
+      "compute_busy_tilelang_wins": 50,
+      "device_span_geomean_speedup": 1.3168335667030986,
+      "device_span_tilelang_wins": 50
+    }
+  }
+}

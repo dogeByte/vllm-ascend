@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "run_id": "260eaa7e5fb91b0b",
   "image_digest": "sha256:7bff69f611867a77fb11da5e08f9debaa745ec0cf9615fa21456f467db71d6ba",
-  "source_commit": "39a2db66d00d141eccc1c3218b86206cfb720098",
+  "source_commit": "ef8c84e0234e1099c96cb3851c8e54749512c98a",
+  "recurrence_source_sha256": "fc7eac16b0056ed25ac6b600987f01abf2a4fca82f8e8646541903af53274ed5",
   "tilelang_commit": "9b5ac505c801ce038e31cc8ab6f1f83e14df1497",
   "baseline": "unfused_native",
   "candidate": "tilelang",
@@ -12,7 +12,8 @@
     "torch": "2.10.0+cpu",
     "torch-npu": "2.10.0.post7",
     "tilelang": "0.1.4",
-    "vllm-ascend": "0.19.1rc2.dev3322+g62fe4cde6"
+    "vllm-ascend": "0.19.1rc2.dev3322+g62fe4cde6",
+    "cann": "9.2.1"
   },
   "configuration": {
     "heads": 64,
@@ -22,7 +23,7 @@
     "repeat": 3,
     "seed": 724311,
     "head_dim": 128,
-    "npu_devices_used": 8,
+    "npu_devices_used": 6,
     "npu_devices_per_shape": 1,
     "tokens": [
       1,
@@ -33,12 +34,12 @@
       80
     ],
     "timing_protocol": "graph",
-    "timing_method": "NPU event time per full forward in a repeated NPU graph; ABBA/BAAB pairs",
+    "timing_method": "NPU stream-event time per full forward in a repeated NPU graph; ABBA/BAAB pairs",
     "timing_unit": "microseconds",
     "timing_accepted_tokens": 1,
     "reset_timed": false,
     "paired_samples_per_shape": 7,
-    "sample_order": "A is unfused native, B is TileLang",
+    "sample_order": "A is unfused Native, B is TileLang",
     "accuracy_protocol": "both",
     "accuracy_modes": [
       "eager",
@@ -63,6 +64,7 @@
       "history_input_unchanged_shapes": 1280,
       "output_checks": 51200,
       "history_exact_checks": 10240,
+      "gated_keys_bitwise_exact": true,
       "worst_by_output": {
         "output": {
           "max_abs": {
@@ -152,6 +154,7 @@
       "history_input_unchanged_shapes": 1280,
       "output_checks": 51200,
       "history_exact_checks": 10240,
+      "gated_keys_bitwise_exact": true,
       "worst_by_output": {
         "output": {
           "max_abs": {
@@ -239,32 +242,32 @@
   "latency": {
     "graph": {
       "median_wins": {
-        "native": 3,
-        "tilelang": 1277,
+        "native": 2,
+        "tilelang": 1278,
         "tied": 0
       },
       "paired_sample_wins": {
-        "native": 17,
-        "tilelang": 8943,
+        "native": 15,
+        "tilelang": 8945,
         "tied": 0
       },
-      "median_tilelang_latency_reduction_pct": 23.287487857930827,
-      "geomean_native_over_tilelang": 1.2736032224156182
+      "median_tilelang_latency_reduction_pct": 28.53767407743247,
+      "geomean_native_over_tilelang": 1.3495609780347833
     },
     "graph_by_tokens": {
       "1": {
         "median_wins": {
-          "native": 3,
-          "tilelang": 77,
+          "native": 2,
+          "tilelang": 78,
           "tied": 0
         },
         "paired_sample_wins": {
-          "native": 17,
-          "tilelang": 543,
+          "native": 15,
+          "tilelang": 545,
           "tied": 0
         },
-        "median_tilelang_latency_reduction_pct": 6.954718897311791,
-        "geomean_native_over_tilelang": 1.060946699030967
+        "median_tilelang_latency_reduction_pct": 6.7563824329021696,
+        "geomean_native_over_tilelang": 1.0614007556790228
       },
       "2": {
         "median_wins": {
@@ -277,8 +280,8 @@
           "tilelang": 560,
           "tied": 0
         },
-        "median_tilelang_latency_reduction_pct": 19.66319726849491,
-        "geomean_native_over_tilelang": 1.2150113601180472
+        "median_tilelang_latency_reduction_pct": 20.438988409011614,
+        "geomean_native_over_tilelang": 1.2261265617977037
       },
       "3": {
         "median_wins": {
@@ -291,8 +294,8 @@
           "tilelang": 560,
           "tied": 0
         },
-        "median_tilelang_latency_reduction_pct": 20.749491837043962,
-        "geomean_native_over_tilelang": 1.2379780442352393
+        "median_tilelang_latency_reduction_pct": 23.829986602203526,
+        "geomean_native_over_tilelang": 1.2860597560257239
       },
       "4": {
         "median_wins": {
@@ -305,8 +308,8 @@
           "tilelang": 560,
           "tied": 0
         },
-        "median_tilelang_latency_reduction_pct": 21.192047365097636,
-        "geomean_native_over_tilelang": 1.2514411694916123
+        "median_tilelang_latency_reduction_pct": 25.22022004811597,
+        "geomean_native_over_tilelang": 1.3144385295534406
       },
       "5": {
         "median_wins": {
@@ -319,8 +322,8 @@
           "tilelang": 560,
           "tied": 0
         },
-        "median_tilelang_latency_reduction_pct": 21.715214551842305,
-        "geomean_native_over_tilelang": 1.2595420534081176
+        "median_tilelang_latency_reduction_pct": 26.775776323221777,
+        "geomean_native_over_tilelang": 1.3402649029203197
       },
       "6": {
         "median_wins": {
@@ -333,8 +336,8 @@
           "tilelang": 560,
           "tied": 0
         },
-        "median_tilelang_latency_reduction_pct": 24.956891416007426,
-        "geomean_native_over_tilelang": 1.3064182400383437
+        "median_tilelang_latency_reduction_pct": 28.135183490907355,
+        "geomean_native_over_tilelang": 1.357517911292033
       },
       "7": {
         "median_wins": {
@@ -347,8 +350,8 @@
           "tilelang": 560,
           "tied": 0
         },
-        "median_tilelang_latency_reduction_pct": 23.688826241069755,
-        "geomean_native_over_tilelang": 1.287955131168377
+        "median_tilelang_latency_reduction_pct": 29.022889373259368,
+        "geomean_native_over_tilelang": 1.374179414096411
       },
       "8": {
         "median_wins": {
@@ -361,8 +364,8 @@
           "tilelang": 560,
           "tied": 0
         },
-        "median_tilelang_latency_reduction_pct": 23.585561069053064,
-        "geomean_native_over_tilelang": 1.2876435561566837
+        "median_tilelang_latency_reduction_pct": 29.24127352370506,
+        "geomean_native_over_tilelang": 1.3802320617991723
       },
       "9": {
         "median_wins": {
@@ -375,8 +378,8 @@
           "tilelang": 560,
           "tied": 0
         },
-        "median_tilelang_latency_reduction_pct": 23.59009546414992,
-        "geomean_native_over_tilelang": 1.290121732269695
+        "median_tilelang_latency_reduction_pct": 29.760310635480792,
+        "geomean_native_over_tilelang": 1.3934392163469147
       },
       "10": {
         "median_wins": {
@@ -389,8 +392,8 @@
           "tilelang": 560,
           "tied": 0
         },
-        "median_tilelang_latency_reduction_pct": 26.912808012139738,
-        "geomean_native_over_tilelang": 1.3433921362592194
+        "median_tilelang_latency_reduction_pct": 30.001538503328,
+        "geomean_native_over_tilelang": 1.3991059298974726
       },
       "11": {
         "median_wins": {
@@ -403,8 +406,8 @@
           "tilelang": 560,
           "tied": 0
         },
-        "median_tilelang_latency_reduction_pct": 24.43864852606551,
-        "geomean_native_over_tilelang": 1.303036956418084
+        "median_tilelang_latency_reduction_pct": 30.66445516887883,
+        "geomean_native_over_tilelang": 1.4105836082341705
       },
       "12": {
         "median_wins": {
@@ -417,8 +420,8 @@
           "tilelang": 560,
           "tied": 0
         },
-        "median_tilelang_latency_reduction_pct": 24.030199218269438,
-        "geomean_native_over_tilelang": 1.2993561150638464
+        "median_tilelang_latency_reduction_pct": 30.322670016142204,
+        "geomean_native_over_tilelang": 1.4079968683380595
       },
       "13": {
         "median_wins": {
@@ -431,8 +434,8 @@
           "tilelang": 560,
           "tied": 0
         },
-        "median_tilelang_latency_reduction_pct": 23.94230150635091,
-        "geomean_native_over_tilelang": 1.2960655825027865
+        "median_tilelang_latency_reduction_pct": 30.88397666252169,
+        "geomean_native_over_tilelang": 1.4183375513697902
       },
       "14": {
         "median_wins": {
@@ -445,8 +448,8 @@
           "tilelang": 560,
           "tied": 0
         },
-        "median_tilelang_latency_reduction_pct": 27.73758244388037,
-        "geomean_native_over_tilelang": 1.3626222139221154
+        "median_tilelang_latency_reduction_pct": 31.04489596063228,
+        "geomean_native_over_tilelang": 1.4230985349244722
       },
       "15": {
         "median_wins": {
@@ -459,8 +462,8 @@
           "tilelang": 560,
           "tied": 0
         },
-        "median_tilelang_latency_reduction_pct": 24.330542817841668,
-        "geomean_native_over_tilelang": 1.3061320843594972
+        "median_tilelang_latency_reduction_pct": 31.270531425714225,
+        "geomean_native_over_tilelang": 1.4288986671553088
       },
       "16": {
         "median_wins": {
@@ -473,9 +476,19 @@
           "tilelang": 560,
           "tied": 0
         },
-        "median_tilelang_latency_reduction_pct": 23.821757389762066,
-        "geomean_native_over_tilelang": 1.2991217131261699
+        "median_tilelang_latency_reduction_pct": 31.127544823471837,
+        "geomean_native_over_tilelang": 1.428160968539904
       }
-    }
+    },
+    "regressions": [
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        1
+      ]
+    ]
   }
 }
